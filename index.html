@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Frontend Task</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <script>
+    // Define a React component
+    function MyComponent() {
+      // Define state using the useState hook
+      const [data, setData] = React.useState([
+        { id: 1, name: "Item 1", value: 10 },
+        { id: 2, name: "Item 2", value: 20 },
+        { id: 3, name: "Item 3", value: 30 },
+      ]);
+
+      // Function to handle changes in the input
+      function handleInputChange(event, id) {
+        const newData = data.map((item) => {
+          if (item.id === id) {
+            return { ...item, value: parseInt(event.target.value) };
+          }
+          return item;
+        });
+        setData(newData);
+      }
+
+      // Create table elements
+      const table = React.createElement(
+        "table",
+        { border: "1", id: "data-table" },
+        React.createElement(
+          "colgroup",
+          null,
+          React.createElement("col", { style: { width: "16.67%" } }),
+          React.createElement("col", { style: { width: "16.67%" } }),
+          React.createElement("col", { style: { width: "16.67%" } }),
+          React.createElement("col", { style: { width: "16.67%" } }),
+          React.createElement("col", { style: { width: "16.67%" } }),
+          React.createElement("col", { style: { width: "16.67%" } })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("th", { colspan: "6" }, "MONTH1")
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Onboarding Call"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Google Search Console Access"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Google Analytics Access"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Website Access"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Tecnical Audit"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Anchor Text and Semantic Analysis"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Competitor Analysis"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Anchor Text/URL Mapping "),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Google Data Studio Report+Local Reporting Suite"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Site Level Optimization"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "On Page Optimization"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Content Creation"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Content Publishing"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Premium Press Release"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Authority Niche Placements"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Review Management"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Index Links"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+        React.createElement(
+          "tr",
+          null,
+          React.createElement("td", null, "Video Recap"),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true }),
+          React.createElement("td", { contentEditable: true })
+        ),
+      );
+
+      // Render the component
+      return table;
+    }
+
+    // Render the component to the DOM
+    ReactDOM.render(
+      React.createElement(MyComponent),
+      document.getElementById("app")
+    );
+  </script>
+</body>
+</html>
